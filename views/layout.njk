@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+
+        {% block head %}
+
+            <title>Classes</title>
+            <link rel="stylesheet" href="/styles.css">
+
+        {% endblock head %}
+
+    </head>
+
+    <body>
+        
+        <header>
+
+            {% block header %}
+
+                <div class="links">
+
+                    <a href="/teachers/teacher" class="active">Teachers</a>
+                    <a href="/students/student">Students</a>
+
+                </div>
+
+            {% endblock header %}
+
+        </header>
+
+        {% block content %}
+        {% endblock content %}
+
+    </body>
+
+</html>
