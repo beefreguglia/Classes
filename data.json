@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Bernardo Brandão Freguglia",
+      "avatar_url": "https://www.google.com/",
+      "birth": 843436800000,
+      "grau_escolaridade": "EMC",
+      "type": "P",
+      "subjects": "Matemática, programação",
+      "created_at": 1594234389677
+    }
+  ]
+}
