@@ -13,6 +13,10 @@ routes.get('/teachers', function(req, res){
 
 })
 
+routes.get('/teachers/:id', teachers.show)
+
+routes.get('/teachers/:id/edit', teachers.edit)
+
 routes.get('/teachers/create', function(req, res){
 
     return res.render("teachers/create")
