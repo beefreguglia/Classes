@@ -2,66 +2,49 @@
 
 {% block content %}
 
-    <div class="card">
+    <div class="card table-container">
 
-        <section 
-            class="avatar"
-            style="background: url(https://source.unsplash.com/collection/3137179/500x500) no-repeat center center / cover">
-        
-        </section>
-        
-        <section class="details">
+        <a href="/instructors/create">Novo</a>
 
-            <h3>Detalhes</h3>
+        <table width="100%">
 
-            <div class="item">
+            <thead>
 
-                <div>Nome Completo</div>
-                <div>Guilherme Saraiva</div>
+                <tr>
+                    <th>Professor</th>
+                    <th>Atendimento</th>
+                    <th>Ação</th>
+                </tr>
 
-            </div>
+            </thead>
 
-            <div class="item">
+            <tbody>
 
-                <div>Idade</div>
-                <div>29 anos</div>
+                {% for teacher in teachers %}
 
-            </div>
+                    <tr>
 
-            <div class="item">
+                        <td>
+                        
+                            <span style="background-image: url({{teacher.avatar_url}})"></span>
+                            {{teacher.name}}
+                        
+                        </td>
+                        <td>{% for subject in teacher.subjects %}
+                        
+                            <span>{{subject}}</span>
 
-                <div>Grau de escolaridade</div>
-                <div>Doutorado</div>
+                        {% endfor %}</td>
+                        <td><a href="/teachers/{{teacher.id}}">ver</a></td>
 
-            </div>
+                    </tr>
 
-            <div class="item">
+                {% endfor %}
 
-                <div>Tipo de aula</div>
-                <div>Presencial</div>
+            </tbody>
 
-            </div>
+        </table>
 
-            <div class="item">
-
-                <div>Acompanhamento</div>
-                <div>
-
-                    <span>Matématica</span>
-                    <span>Física</span>
-
-                </div>
-
-            </div>
-
-            <div class="item">
-
-                <div>Desde</div>
-                <div>2019</div>
-
-            </div>
-
-        </section>
 
     </div>
 

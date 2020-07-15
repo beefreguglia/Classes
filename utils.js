@@ -72,7 +72,46 @@ module.exports = {
         }
 
 
-    }
+    },
 
+    ano: function(ano){
+
+        if(ano == "5"){
+
+            return '5 ano do ensino fundamental'
+
+        }
+        if(ano == "6"){
+
+            return '6 ano do ensino fundamental'
+
+        }
+        if(ano == "7"){
+
+            return '7 ano do ensino fundamental'
+
+        }
+        if(ano == "8"){
+
+            return '8 ano do ensino fundamental'
+
+        }
+        if(ano == "1"){
+
+            return '1 ano do ensino médio'
+
+        }
+        if(ano == "2"){
+
+            return '2 ano do ensino médio'
+
+        }
+        if(ano == "3"){
+
+            return '3 ano do ensino médio'
+
+        }
+
+    }
 
 }

@@ -1,6 +1,38 @@
 const fs = require('fs')
-const data = require('./data.json')
-const {age, date, graduation, type} = require('./utils')
+const data = require('../data.json')
+const {age, date, graduation, type} = require('../utils')
+
+exports.pagehome = function(req, res){
+    
+    let teach = []
+
+    for(let index = 1;index < data.teachers.length+1; index++){
+
+        const foundTeacher = data.teachers.find(function(teacher){
+
+            return teacher.id == index
+
+        })
+        if (!foundTeacher) {
+
+            return res.send("Teacher not found")
+    
+        }
+
+        teach.push({
+
+            ...foundTeacher,
+            subjects: foundTeacher.subjects.split(",")
+            
+
+        }) 
+
+
+    }
+
+    return res.render("teachers/page-home", {teachers: teach})
+
+}
 
 exports.show = function(req, res){
 
@@ -81,6 +113,12 @@ exports.post = function(req, res){
 
 }
 
+exports.create = function(req, res){
+
+    return res.render("teachers/create")
+
+}
+
 exports.edit = function (req, res) {
 
     const { id } = req.params
@@ -134,7 +172,8 @@ exports.update = function(req, res){
 
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
 
     }
 

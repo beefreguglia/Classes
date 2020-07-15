@@ -1,23 +1,16 @@
 const express = require('express')
 const routes = express.Router()
-const teachers = require('./teachers')
+const teachers = require('./controllers/teachers')
+const students = require('./controllers/students')
 
 routes.get('/', function(req,res){
 
     return res.redirect('/teachers')
 })
 
-routes.get('/teachers', function(req, res){
+routes.get('/teachers', teachers.pagehome)
 
-    return res.render("teachers/page-home")
-
-})
-
-routes.get('/teachers/create', function(req, res){
-
-    return res.render("teachers/create")
-
-})
+routes.get('/teachers/create', teachers.create)
 
 routes.get('/teachers/:id', teachers.show)
 
@@ -28,5 +21,22 @@ routes.post('/teachers', teachers.post)
 routes.put('/teachers', teachers.update)
 
 routes.delete('/teachers', teachers.delete)
+
+// Student - Routes
+
+routes.get('/students', students.pagehome)
+
+routes.get('/students/create', students.create)
+
+routes.get('/students/:id', students.show)
+
+routes.get('/students/:id/edit', students.edit)
+
+routes.post('/students', students.post)
+
+routes.put('/students', students.update)
+
+routes.delete('/students', students.delete)
+
 
 module.exports = routes

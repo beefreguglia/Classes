@@ -7,13 +7,13 @@
       "birth": 843436800000,
       "grau_escolaridade": "doutorado",
       "type": "P",
-      "subjects": "Matemática, programação, física, portugues",
+      "subjects": "Matemática, programação, física",
       "created_at": 1594234389677
     },
     {
-      "id": "2",
-      "name": "Lucas Martins",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/44811653?s=400&u=f7f56c976b655ef12b44b061ffada54b1f6518fe&v=4",
+      "id": 2,
+      "name": "Eduarda Montenegro",
+      "avatar_url": "https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
       "birth": 460252800000,
       "grau_escolaridade": "ESC",
       "type": "P",
@@ -23,12 +23,23 @@
     {
       "id": 3,
       "name": "Rodrigo Espencer",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/44811653?s=400&u=f7f56c976b655ef12b44b061ffada54b1f6518fe&v=4",
+      "avatar_url": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       "birth": 662083200000,
       "grau_escolaridade": "EMC",
       "type": "D",
       "subjects": "Programação,matématica,historia",
       "created_at": 1594516790965
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Fernanda Fonseca",
+      "avatar_url": "https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80",
+      "birth": 1032912000000,
+      "email": "fernanda@gym.com",
+      "ano": "1",
+      "carga_horaria": "35"
     }
   ]
 }
